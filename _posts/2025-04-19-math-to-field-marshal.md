@@ -24,9 +24,9 @@ We model rank progression as a series of weighted coin flips:
 
 For each assumed win rate (the coin’s probability of landing heads), we flip until the game ends, repeat 1,000 trials, and average the number of flips required.
 
-For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate (roughly what you experience when you put War Bonds in your deck).
+For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate *(roughly what you experience when you put War Bonds in your deck)*.
 
-![But... but... War Bonds is card neutral!](assets/images/sad_bonds.jpg)
+![But... but... War Bonds is card neutral!](../assets/images/sad_bonds.jpg)
 
 # Results
 
@@ -34,7 +34,7 @@ Here's our first graph, modeling the climb from rank 5 to rank 1.
 
 Yikes! It's pretty clear that if you have a very low chance to win a game, you're unlikely to make much progress towards ranking up. At 30% win rate, it took on average over 27,000 games to reach Field Marshal!
 
-(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took literal hours and didn't complete.)
+*(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took literal hours and didn't complete.)*
 
 
 
