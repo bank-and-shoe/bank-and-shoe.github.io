@@ -18,9 +18,9 @@ We model rank progression as a series of weighted coin flips:
 - You start at 0 points  
 - You “rank up” in 5‑point increments  
 - Each **heads** flip gives +1 point  
-  - *(win‑streak bonus)* after two consecutive wins, each additional win grants 2 points until you lose  
+  - **(win‑streak bonus)** after two consecutive wins, each additional win grants 2 points until you lose  
 - Each **tails** flip gives −1 point  
-  - *(rank‑down guard)* when your score is a multiple of 5, it takes **three** losses in a row to lose a point  
+  - **(rank‑down guard)** when your score is a multiple of 5, it takes **three** losses in a row to lose a point  
     - in other words, at multiples of five, the first two losses are “free”  
 - The simulation ends when you reach 20 points (climbing from Rank 5 to *Field Marshal*) or 25 points (e.g., moving from Rank 25 to Rank 20 or Rank 6 to Rank 10).  
   - In KARDS, you can’t drop below the bottom of each five‑rank bracket (Ranks 25, 20, 15, 10, 5, and 1). That means it only makes sense to model a climb of five ranks at a time (e.g., 15→10) or the final four‑rank jump (5→Field Marshal).  
@@ -30,18 +30,15 @@ For each assumed win rate (the coin’s probability of landing heads), we flip u
 
 For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate (roughly what you experience when you put War Bonds in your deck).
 
-![But... but... War Bonds is card neutral!](../assets/images/sad_bonds.jpg)
+![But... but... War Bonds is card neutral!](assets/images/sad_bonds.jpg)
 
 # Results
 
 Here's our first graph, modeling the climb from rank 5 to rank 1.
 
-Yikes! It's pretty clear that if you have a very low chance to win a game (say, 30%), you're unlikely to make much progress towards ranking up.
+Yikes! It's pretty clear that if you have a very low chance to win a game, you're unlikely to make much progress towards ranking up. At 30% win rate, it took on average over 27,000 games to reach Field Marshal!
 
-(I tried with lower percentages, but even with, say, 25% win rate, the simulations took literal hours and didn't complete).
-
-
-Naturally, if we want to model a five-rank climb (like rank 25→20), the lower win rates struggle even more:
+(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took literal hours and didn't complete.)
 
 
 
@@ -49,11 +46,15 @@ Since success at those low win percentages takes a lot of unlikely streaks, we'd
 
 
 
-
 I mentioned before that the higher percentages are smoother, and attempted linear fits show it (TODO).
 
 
 This linearity means that, it takes, roughly, an absolute X percent increase in your win rate to halve the number of games you'd expect to play. (In other words, if you won X% of the time, you'd play twice as many games to rank up as someone winning Y% of the time).
+
+
+## What about the five-rank climb (like rank 10→6)?
+
+Naturally, if we want to model a five-rank climb (like rank 25→20), the lower win rates struggle even more:
 
 
 
