@@ -1,8 +1,4 @@
- ---
-title:  "KARDS: The Math To Field Marshal"
-date:   2025-04-19 10:00:00
-layout: post
----
+
 ## How many games does it take to rank up in KARDS?
 
 We might judge a general by their chance of winning a battle. Yet, as the apocryphal adage goes, “quantity has a quality all its own.” Should we favor a general with only a slight edge but many battles under their belt, or one who’s fought fewer skirmishes but wins far more consistently?
