@@ -1,5 +1,5 @@
 ---
-title: Baby's First Blog
+title: Bank-and-Shoe-Blog
 layout: home
 ---
 
