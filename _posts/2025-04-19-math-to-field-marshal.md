@@ -34,7 +34,7 @@ Here's our first graph, modeling the climb from rank 5 to rank 1.
 
 Yikes! It's pretty clear that if you have a very low chance to win a game, you're unlikely to make much progress towards ranking up. At 30% win rate, it took on average over 27,000 games to reach Field Marshal!
 
-*(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took literal hours and didn't complete.)*
+*(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took more than an hour to finish, so I gave up.)*
 
 
 
@@ -42,7 +42,8 @@ Since success at those low win percentages takes a lot of unlikely streaks, we'd
 
 
 
-I mentioned before that the higher percentages are smoother, and attempted linear fits show it (TODO).
+I mentioned before that the higher percentages are smoother, and a few attempted linear fits bear out that intuition: <TODO>
+
 
 
 This linearity means that, it takes, roughly, an absolute X percent increase in your win rate to halve the number of games you'd expect to play. (In other words, if you won X% of the time, you'd play twice as many games to rank up as someone winning Y% of the time).
@@ -59,7 +60,7 @@ Naturally, if we want to model a five-rank climb (like rank 25→20), the lower 
 
 Alright, we made some graphs, but how do you employ this to rank up faster? Some tips:
 
-- *When in doubt, aggro 'em out.* It's more important to get reps in than it is to optimize your win percentage, unless you're much better than your opponents.
+- **When in doubt, aggro 'em out.** It's more important to get reps in than it is to optimize your win percentage, unless you're much better than your opponents.
   - From a gameplay perspective, too, aggressive decks just have reasonable game against almost *anything*. Annecdotally, from my years of play experience, just being on the play gives you a good shot as an aggro deck, even against decks specifically designed to prey on the aggressive decks.
   - In other words, if you're trying to put War Bonds in your deck, you have to be extremely confident in your own skill and/or your metagame choice.
 
@@ -71,9 +72,9 @@ But, if you're just playing for fun, do whatever you'd like.
 It’s clear that the star‑earning policies of KARDS are designed to help players climb the ranks—but how much do they actually boost your progress?
 
 We can re-run our simulations under three alternative rule sets:
-- *No win‑streak bonus:* each win is worth only +1 point.  
-- *No rank‑up loss‑streak guard:* every loss always costs −1 point.  
-- *No help at all:* wins +1, losses −1 with neither bonus nor guard.  
+- **No win‑streak bonus:** each win is worth only +1 point.  
+- **No rank‑up loss‑streak guard:** every loss always costs −1 point.  
+- **No help at all:** wins +1, losses −1 with neither bonus nor guard.  
 
 
 
