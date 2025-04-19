@@ -26,7 +26,7 @@ For each assumed win rate (the coin’s probability of landing heads), we flip u
 
 For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate *(roughly what you experience when you put War Bonds in your deck)*.
 
-![But... but... War Bonds is card neutral!](../assets/images/sad_bonds.jpg)
+![But... but... War Bonds is card neutral!](/assets/images/sad_bonds.jpg)
 
 # Results
 
