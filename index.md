@@ -1,6 +1,6 @@
 ---
 title: Baby's First Blog
-layout: default
+layout: home
 ---
 
 # Welcome!
