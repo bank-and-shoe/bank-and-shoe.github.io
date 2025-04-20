@@ -1,5 +1,5 @@
 ---
-title: Bank-and-Shoe-Blog
+title: Bank and Shoe Blog
 layout: home
 ---
 
