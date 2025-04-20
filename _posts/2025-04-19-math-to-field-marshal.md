@@ -41,7 +41,6 @@ Because those low‑win trials depend on improbable streaks, their variance is e
   style="width: 50%;
            max-width: 100%;
            height: auto;
-           min-height: 400px;
            display: block;
            margin: 0 auto;"
   loading="lazy"  
