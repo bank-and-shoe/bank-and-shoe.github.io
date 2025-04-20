@@ -14,10 +14,9 @@ We model rank progression as a series of weighted coin flips:
 - You start at 0 points  
 - You “rank up” in 5‑point increments  
 - Each **heads** flip gives +1 point  
-  - **(win‑streak bonus)** after two consecutive wins, each additional win grants 2 points until you lose  
-- Each **tails** flip gives −1 point  
+  - **(win‑streak bonus)** starting with your third consecutive win, each consecutive win is worth 2 points
   - **(rank‑down guard)** when your score is a multiple of 5, it takes **three** losses in a row to lose a point  
-- The simulation ends when you reach 20 points (climbing from Rank 5 to *Field Marshal*) or 25 points (e.g., moving from Rank 25 to Rank 20 or Rank 6 to Rank 10).  
+- The simulation ends when you reach 20 points (climbing from Rank 5 to *Field Marshal*) or 25 points (e.g., moving from Rank 25 to Rank 20).  
   - In KARDS, you can’t drop below the bottom of each five‑rank bracket (Ranks 25, 20, 15, 10, 5, and 1). That means it only makes sense to model a climb of five ranks at a time (e.g., 15→10) or the final four‑rank jump (5→Field Marshal).  
 
 For each assumed win rate (the coin’s probability of landing heads), we flip until the game ends, repeat 10,000 trials, and average the number of flips required.
