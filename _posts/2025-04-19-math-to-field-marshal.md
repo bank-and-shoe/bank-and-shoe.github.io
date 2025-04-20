@@ -50,9 +50,11 @@ So, past ~60% win rate, the relationship is essentially linear.
 - **Japan/Germany aggro**: ~60% win rate, with games that average ~5 minutes
 - **Soviet/U.S. midrange**: ~75% win rate, with approx. ~10 min games
 
-Even though the midrange deck wins way more often, the faster aggro deck will usually net you a higher rank faster. (Don't believe me? Jump into the end-of-month queues. You'll see more aggro than 90's Nickelodeon kids did on that crag.)
+Even though the midrange deck wins way more often, the faster aggro deck will usually net you a higher rank faster. 
 
-On the flip side, small gains at lower win rates are huge. A 5% bump from 40% to 45% slashes expected games by two‑thirds. Even if each match takes twice as long, that win‑rate boost is worth it.
+*(Don't believe me? Jump into the end-of-month queues. You'll see more aggro than 90's Nickelodeon kids did on that crag.)*
+
+On the flip side, small gains at lower win rates are **huge**. A 5% win-rate bump from 40% to 45% slashes expected games by two‑thirds. Even if each match takes twice as long, that win‑rate boost is worth it.
 
 ## What about the five-rank climb (like rank 10→6)?
 
