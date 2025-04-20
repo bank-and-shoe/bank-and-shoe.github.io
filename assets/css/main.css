@@ -1,0 +1,8 @@
+
+@import "minima";
+
+@media (min-width: 768px) {
+  .page__inner {
+    max-width: 90vw !important;
+  }
+}
