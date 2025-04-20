@@ -38,7 +38,12 @@ Because those low‑win trials depend on improbable streaks, their variance is e
 <img 
   src="/assets/images/5_to_fm_base.png" 
   alt="Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate" 
-  style="min-height: 400px"
+  style="width: 50%;
+           max-width: 100%;
+           height: auto;
+           min-height: 400px;
+           display: block;
+           margin: 0 auto;"
   loading="lazy"  
 />
 
