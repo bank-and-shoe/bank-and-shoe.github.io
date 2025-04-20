@@ -86,10 +86,12 @@ Alright, data’s in—here’s how to rank up faster:
 - **Exploit win‑streak bias.** You can queue during off‑peak hours to farm AI opponents and rack up easy wins.
 
 
-If you don't care about hitting FM ASAP, play what you enjoy. I am, in fact, one of the sorry War-Bonding saps.
+If you don't care about hitting FM ASAP, play what you enjoy. I am, in fact, one of the saps running War Bonds.
+
 
 
 Thanks for reading!
+
 B&S
 
 
