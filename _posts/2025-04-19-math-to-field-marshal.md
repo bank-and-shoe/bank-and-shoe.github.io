@@ -17,13 +17,12 @@ We model rank progression as a series of weighted coin flips:
   - **(win‑streak bonus)** after two consecutive wins, each additional win grants 2 points until you lose  
 - Each **tails** flip gives −1 point  
   - **(rank‑down guard)** when your score is a multiple of 5, it takes **three** losses in a row to lose a point  
-    - in other words, at multiples of five, the first two losses are “free”  
 - The simulation ends when you reach 20 points (climbing from Rank 5 to *Field Marshal*) or 25 points (e.g., moving from Rank 25 to Rank 20 or Rank 6 to Rank 10).  
   - In KARDS, you can’t drop below the bottom of each five‑rank bracket (Ranks 25, 20, 15, 10, 5, and 1). That means it only makes sense to model a climb of five ranks at a time (e.g., 15→10) or the final four‑rank jump (5→Field Marshal).  
 
 For each assumed win rate (the coin’s probability of landing heads), we flip until the game ends, repeat 10,000 trials, and average the number of flips required.
 
-For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate *(roughly what you experience when you put War Bonds in your deck)*.
+For simplicity, I vary the win rate in 2.5% increments, starting from a *(rather abysmal)* 30% win rate *(which is roughly what you experience when you put War Bonds in your deck)*.
 
 ![But... but... War Bonds is card neutral!](/assets/images/sad_bonds.jpg)
 
@@ -73,14 +72,14 @@ In other words, the above analyses apply here, but shifted to the right on the X
 Alright, data’s in—here’s how to rank up faster:
 
 - **When in doubt, aggro is your out.** More reps trump tiny win‑rate gains (unless you outclass your opponents by huge margins).
-  - From a pure gameplay perspective, aggro can beat almost anything, especially if you're on the play. 
+  - Also, from a pure gameplay perspective, aggro can beat almost anything, especially if you're on the play. So just play it.
   - Only switch to slower decks *(running things like War Bonds or Compromise)* if you’re very confident in your skill and your meta read.
 - **Exploit win‑streak bias.** You can queue during off‑peak hours to farm AI opponents and rack up easy wins.
 
 If you don't care about hitting FM ASAP, play what you enjoy. I am, in fact, one of the sorry War-Bonding saps.
 
 Thanks for reading!
--B&S
+--B&S
 <!--  
 
 ## Bonus Hypothetical: how much do the bonuses and rank-guards help?
