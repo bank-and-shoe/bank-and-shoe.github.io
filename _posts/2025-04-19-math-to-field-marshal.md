@@ -35,6 +35,13 @@ Unsurprisingly, a low win rate barely moves the needle. At 30% wins, reaching Fi
 
 Because those low‑win trials depend on improbable streaks, their variance is enormous. Assuming KARDS matches you against players of similar skill with a decent ranking system *(big assumption)*, let’s focus on the smoother 40%+ region:
 
+<img 
+  src="/assets/images/5_to_fm_base.png" 
+  alt="Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate" 
+  width="800" 
+  loading="lazy"  
+/>
+
 ![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate](/assets/images/5_to_fm_base.png)
 
 
@@ -72,39 +79,18 @@ In other words, the above analyses apply here, but shifted to the right on the X
 ## Takeways and Tips for Ranking Up!
 Alright, data’s in—here’s how to rank up faster:
 
+
 - **When in doubt, aggro is your out.** More reps trump tiny win‑rate gains (unless you outclass your opponents by huge margins).
   - Also, from a pure gameplay perspective, aggro can beat almost anything, especially if you're on the play. So just play it.
   - Only switch to slower decks *(running things like War Bonds or Compromise)* if you’re very confident in your skill and your meta read.
 - **Exploit win‑streak bias.** You can queue during off‑peak hours to farm AI opponents and rack up easy wins.
 
+
 If you don't care about hitting FM ASAP, play what you enjoy. I am, in fact, one of the sorry War-Bonding saps.
 
+
 Thanks for reading!
---B&S
-<!--  
-
-## Bonus Hypothetical: how much do the bonuses and rank-guards help?
-
-It’s clear that the star‑earning policies of KARDS are designed to help players climb the ranks—but how much do they actually boost your progress?
-
-We can re-run our simulations under three alternative rule sets:
-- **No win‑streak bonus:** each win is worth only +1 point.  
-- **No rank-guard:** every loss always costs −1 point, even at the bottom of a rank.  
-- **No help at all:** wins +1, losses −1 with neither bonus nor guard.  
-
-For ease, I reduce the number of simulations to 1000 per win rate per scenario, and also only chart 40%+:
-
-<graph>
-
-Wowza, yeah, that's a lot of expected games at 40%. Let's zoom in on the 60% to 95% range:
-
-<zoomed>
-
-All this to confim a couple intuitions:
-- The win streak bonus is much more useful to the rank-up process
-- The rank-guard matters a lot more at lower win-rates
-
--->
+B&S
 
 
 
