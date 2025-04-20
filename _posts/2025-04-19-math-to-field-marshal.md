@@ -35,17 +35,6 @@ Unsurprisingly, a low win rate barely moves the needle. At 30% wins, reaching Fi
 
 Because those low‑win trials depend on improbable streaks, their variance is enormous. Assuming KARDS matches you against players of similar skill with a decent ranking system *(big assumption)*, let’s focus on the smoother 40%+ region:
 
-<img 
-  src="/assets/images/5_to_fm_base.png" 
-  alt="Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate" 
-  style="width: 50%;
-           max-width: 100%;
-           height: auto;
-           display: block;
-           margin: 0 auto;"
-  loading="lazy"  
-/>
-
 ![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate](/assets/images/5_to_fm_base.png)
 
 
