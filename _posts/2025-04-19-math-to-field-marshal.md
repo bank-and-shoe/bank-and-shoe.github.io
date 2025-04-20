@@ -66,9 +66,9 @@ Even though the midrange deck wins way more often, the faster aggro deck will us
 
 On the flip side, small gains at lower win rates are **huge**. A 5% win-rate bump from 40% to 45% slashes expected games by two‑thirds. Even if each match takes twice as long, that win‑rate boost is worth it.
 
-## What about the five-rank climb (like rank 10→6)?
+## What about the five-rank climb?
 
-Naturally, if we want to model a five-rank climb (like rank 25→20), the simulation is the same, but instead of collecting 20 points (=stars), you have to hit 25 points:
+Naturally, if we want to model a five-rank climb (like rank 10→5), the simulation is the same, but instead of collecting 20 points (=stars), you have to hit 25 points:
 
 ![games played to rank up 5 ranks](/assets/images/6_to_10_base_30_100.png)
 
