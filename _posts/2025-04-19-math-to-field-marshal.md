@@ -38,11 +38,11 @@ Because those low‑win trials depend on improbable streaks, their variance is e
 <img 
   src="/assets/images/5_to_fm_base.png" 
   alt="Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate" 
-  width="800" 
+  width="1200" 
   loading="lazy"  
 />
 
-![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate](/assets/images/5_to_fm_base.png){: width="1200px" loading="lazy" }
+![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate](/assets/images/5_to_fm_base.png)
 
 
 In that range, games‑to‑rank‑up and win rate start to form a linear trend. I fitted linear regressions on filtered subsets of the data:
