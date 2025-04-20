@@ -20,61 +20,92 @@ We model rank progression as a series of weighted coin flips:
     - in other words, at multiples of five, the first two losses are “free”  
 - The simulation ends when you reach 20 points (climbing from Rank 5 to *Field Marshal*) or 25 points (e.g., moving from Rank 25 to Rank 20 or Rank 6 to Rank 10).  
   - In KARDS, you can’t drop below the bottom of each five‑rank bracket (Ranks 25, 20, 15, 10, 5, and 1). That means it only makes sense to model a climb of five ranks at a time (e.g., 15→10) or the final four‑rank jump (5→Field Marshal).  
-    - In other words, going from Rank 25 to 15 is just two successive five‑rank climbs, since once you hit Rank 20 you’re protected from falling back below it.  
 
-For each assumed win rate (the coin’s probability of landing heads), we flip until the game ends, repeat 1,000 trials, and average the number of flips required.
+For each assumed win rate (the coin’s probability of landing heads), we flip until the game ends, repeat 10,000 trials, and average the number of flips required.
 
 For simplicity, I vary the win rate in 2.5% increments, starting from a (rather abysmal) 30% win rate *(roughly what you experience when you put War Bonds in your deck)*.
 
 ![But... but... War Bonds is card neutral!](/assets/images/sad_bonds.jpg)
 
-# Results
+# Simulation Results: the climb from Rank 5 to Field Marshal
 
-Here's our first graph, modeling the climb from rank 5 to rank 1.
+Here’s our first graph, modeling the climb from Rank 5 to Field Marshal:  
+![Games played to hit Field Marshal vs. win percentage, in 2.5% increments](/assets/images/5_to_fm_base_30_100.png)
 
-Yikes! It's pretty clear that if you have a very low chance to win a game, you're unlikely to make much progress towards ranking up. At 30% win rate, it took on average over 27,000 games to reach Field Marshal!
+Unsurprisingly, a low win rate barely moves the needle. At 30% wins, reaching Field Marshal takes ~28,000 games on average—technically possible, but practically infinite.  
+*(I tried lower win percentages, but even at 25%, the simulation batches took over an hour, so I gave up.)*
 
-*(I tried with lower win percentages, but even with, say, 25% win rate, the simulations took more than an hour to finish, so I gave up.)*
+Because those low‑win trials depend on improbable streaks, their variance is enormous. Assuming KARDS matches you against players of similar skill with a decent ranking system *(big assumption)*, let’s focus on the smoother 40%+ region:
 
-
-
-Since success at those low win percentages takes a lot of unlikely streaks, we'd expect high variance for each trial that ends. Let's set those aside and trust that the KARDS matchmaking engine pairs players of roughly equal skill together; so lets turn to the smoother part of the curve, the 40%+ range.
-
-
-
-I mentioned before that the higher percentages are smoother, and a few attempted linear fits bear out that intuition: <TODO>
+![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate](/assets/images/5_to_fm_base.png)
 
 
+In that range, games‑to‑rank‑up and win rate start to form a linear trend. I fitted linear regressions on filtered subsets of the data:
 
-This linearity means that, it takes, roughly, an absolute X percent increase in your win rate to halve the number of games you'd expect to play. (In other words, if you won X% of the time, you'd play twice as many games to rank up as someone winning Y% of the time).
+![Games played to hit Field Marshal vs. win percentage, in 2.5% increments, starting at 40% win rate, with a few linear fits](/assets/images/5_to_fm_40_plus_linear_fits.png)
 
+So, past ~60% win rate, the relationship is essentially linear.
+
+**Practical takeaway:**   Let's say you're choosing between the following decks to ladder with:
+
+- **Japan/Germany aggro**: ~60% win rate, with games that average ~5 minutes
+- **Soviet/U.S. midrange**: ~75% win rate, with approx. ~10 min games
+
+Even though the midrange deck wins way more often, the faster aggro deck will usually net you a higher rank faster. (Don't believe me? Jump into the end-of-month queues. You'll see more aggro than 90's Nickelodeon kids did on that crag.)
+
+On the flip side, small gains at lower win rates are huge. A 5% bump from 40% to 45% slashes expected games by two‑thirds. Even if each match takes twice as long, that win‑rate boost is worth it.
 
 ## What about the five-rank climb (like rank 10→6)?
 
-Naturally, if we want to model a five-rank climb (like rank 25→20), the lower win rates struggle even more:
+Naturally, if we want to model a five-rank climb (like rank 25→20), the simulation is the same, but instead of collecting 20 points (=stars), you have to hit 25 points:
 
+![games played to rank up 5 ranks](/assets/images/6_to_10_base_30_100.png)
 
+At that threshold, lower win rates suffer even more--a 30% win rate means you are grinding hundreds of thousands of games to rank up; even at a 40% win rate, these simulations suggests ~800 games to climb those five grueling ranks.
 
+If we zoom in on just the 40+ range, we see now our linear fits have shifted further: only around 60%+ do the data points become strongly linear:
 
-# Takeways and Tips for Ranking Up!
+![games played to rank up 5 ranks](/assets/images/6_to_10_40_plus_linear_fits.png)
 
-Alright, we made some graphs, but how do you employ this to rank up faster? Some tips:
+In other words, the above analyses apply here, but shifted to the right on the X-axis: you should choose higher win-rate decks over faster-played decks unless you're alreading winning 60%+. 
 
-- **When in doubt, aggro 'em out.** It's more important to get reps in than it is to optimize your win percentage, unless you're much better than your opponents.
-  - From a gameplay perspective, too, aggressive decks just have reasonable game against almost *anything*. Annecdotally, from my years of play experience, just being on the play gives you a good shot as an aggro deck, even against decks specifically designed to prey on the aggressive decks.
-  - In other words, if you're trying to put War Bonds in your deck, you have to be extremely confident in your own skill and/or your metagame choice.
+## Takeways and Tips for Ranking Up!
+Alright, data’s in—here’s how to rank up faster:
 
+- **When in doubt, aggro is your out.** More reps trump tiny win‑rate gains (unless you outclass your opponents by huge margins).
+  - From a pure gameplay perspective, aggro can beat almost anything, especially if you're on the play. 
+  - Only switch to slower decks *(running things like War Bonds or Compromise)* if you’re very confident in your skill and your meta read.
+- **Exploit win‑streak bias.** You can queue during off‑peak hours to farm AI opponents and rack up easy wins.
 
-But, if you're just playing for fun, do whatever you'd like.
+If you don't care about hitting FM ASAP, play what you enjoy. I am, in fact, one of the sorry War-Bonding saps.
 
-# Hypothetical: 
+Thanks for reading!
+-B&S
+<!--  
+
+## Bonus Hypothetical: how much do the bonuses and rank-guards help?
 
 It’s clear that the star‑earning policies of KARDS are designed to help players climb the ranks—but how much do they actually boost your progress?
 
 We can re-run our simulations under three alternative rule sets:
 - **No win‑streak bonus:** each win is worth only +1 point.  
-- **No rank‑up loss‑streak guard:** every loss always costs −1 point.  
+- **No rank-guard:** every loss always costs −1 point, even at the bottom of a rank.  
 - **No help at all:** wins +1, losses −1 with neither bonus nor guard.  
+
+For ease, I reduce the number of simulations to 1000 per win rate per scenario, and also only chart 40%+:
+
+<graph>
+
+Wowza, yeah, that's a lot of expected games at 40%. Let's zoom in on the 60% to 95% range:
+
+<zoomed>
+
+All this to confim a couple intuitions:
+- The win streak bonus is much more useful to the rank-up process
+- The rank-guard matters a lot more at lower win-rates
+
+-->
+
 
 
 
